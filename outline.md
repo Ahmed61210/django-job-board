@@ -1,5 +1,5 @@
 job:
-    - title
+    - title   - done
     - location
     - job type
     - description
