@@ -1,13 +1,13 @@
 job:
     - title   - done
     - location
-    - job type
-    - description
-    - published at
-    - vacancy
-    - salary
+    - job type - done
+    - description - done
+    - published at - done
+    - vacancy - done
+    - salary - done
     - Category
-    - experiance
+    - experiance - done
     - gender
 
 
@@ -30,3 +30,9 @@ blog:
 contact
 home
 login
+
+
+* relations:
+    - one to many  (user - posts) foreignkey
+    - many to many (users - groups)
+    - one to one   (user - profile)
