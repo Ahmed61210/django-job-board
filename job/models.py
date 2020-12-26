@@ -5,6 +5,10 @@ JOB_TYPE = (
     ("Full Time","Full Time"),
     ("Part Time","Part Time"),
 )
+def image_upload(instance, filemane):
+    imagename , extension = filemane.split('.')
+    return 'jobs/%s.%s'%(instance.id, extension)
+
 class Job(models.Model):
     title = models.CharField (max_length=100)
     # location 
@@ -15,6 +19,7 @@ class Job(models.Model):
     salary = models.IntegerField (default=0)
     category = models.ForeignKey ("Category", on_delete=models.CASCADE)
     experiance = models.IntegerField (default=1)
+    image = models.ImageField(upload_to=image_upload)
 
     def __str__(self):
         return self.title
